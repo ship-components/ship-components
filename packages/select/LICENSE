@@ -1,34 +1,6 @@
-# ship-components
+The MIT License (MIT)
 
-ship-components are a collection of front-end React components written using Babel and CSS Modules.
-
-## Development
-
-[yarn](https://yarnpkg.com) and [lerna](https://lernajs.io/) are required to manage the multiple components. Both need to be installed globally prior to running any of the following commands.
-
-```shell
-lerna bootstrap
-```
-
-## Testing
-
-The following command will run unit tests for each of the components.
-
-```shell
-lerna run test
-```
-
-You can use the optional `--scope` argument to run tests on a specific component
-
-```shell
-lerna run test --scope ship-components-buttons
-```
-
-## License
-
-MIT License
-
-Copyright (c) SHIP
+Copyright (c) 2015 SHIP
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -47,3 +19,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+

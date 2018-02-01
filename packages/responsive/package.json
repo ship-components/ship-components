@@ -1,0 +1,49 @@
+{
+  "name": "ship-components-responsive",
+  "version": "0.1.0",
+  "description": "React component to pass the parent container dimensions to a child component",
+  "main": "src/ResponsiveContainer.jsx",
+  "scripts": {
+    "lint": "eslint --max-warnings 0 src/*",
+    "lint:fix": "eslint --fix src/*",
+    "test": "jest src/ --coverage",
+    "test:watch": "jest --watch --coverage",
+    "coverage": "cat coverage/lcov.info | coveralls -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ship-components/ship-components-responsive.git"
+  },
+  "keywords": [
+    "react",
+    "responsive",
+    "babel"
+  ],
+  "author": "Isaac Suttell <isaac.suttell@sony.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ship-components/ship-components-responsive/issues"
+  },
+  "homepage": "https://github.com/ship-components/ship-components-responsive#readme",
+  "dependencies": {
+    "invariant": ">=2",
+    "prop-types": ">=15",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^22.1.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "coveralls": "^2.13.1",
+    "enzyme": "^2.9.1",
+    "eslint": ">=4",
+    "eslint-config-ship-components": "^1.4.2",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^22.1.4",
+    "react-test-renderer": "^15.6.1",
+    "regenerator-runtime": "^0.11.1"
+  }
+}

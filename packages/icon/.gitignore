@@ -1,0 +1,5 @@
+.DS_Store
+*.sublime*
+dist/index.js*
+dist/index.min.js*
+node_modules/

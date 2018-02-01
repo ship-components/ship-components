@@ -1,0 +1,214 @@
+/**
+ * Reset
+ */
+.btn {
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  font-weight: inherit;
+  overflow: hidden;
+  transition: 100ms ease-in all;
+  cursor: pointer;
+  vertical-align: top;
+  text-align: center;
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:not(.aui-button), /* Atlassian Override */
+  &:link,
+  &:hover,
+  &:active,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.wrapper {
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.disabled {
+  cursor: not-allowed;
+  .container {
+    opacity: 0.54;
+    background-color: #eee;
+  }
+}
+
+.hoverEffect {
+  background-color: color($primary-color a(0.1));
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/**
+ * Container to handle border radius clipping/overflow
+ */
+.container {
+  padding: calc(4px * 2);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: 100ms ease-in all;
+  position: initial;
+  /**
+   * Fix for webkit border-radius overflow bug
+   * http://stackoverflow.com/questions/5736503/how-to-make-css3-rounded-corners-hide-overflow-in-chrome-opera
+   */
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+.hoverContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/**
+ * Hover states
+ */
+.enter {
+  opacity: 0;
+  transition: 300ms all ease-in;
+  transform: scale(0);
+}
+
+.enterActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.leave {
+  opacity: 1;
+  transition: 300ms all ease-out;
+  transform: scale(1);
+}
+
+.leaveActive {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/**
+ * Icon Size
+ */
+.icon {
+  font-size: 20px;
+  vertical-align: text-top;
+  line-height: 1;
+  display: inline-block;
+}
+span + .icon {
+  margin-left: 8px;
+}
+
+.action .icon,
+.iconButton .icon {
+  font-size: 24px;
+  opacity: 0.86;
+  vertical-align: baseline;
+  margin-left: 0;
+}
+
+/**
+ * Consistent Shadow
+ */
+.action,
+.raised,
+.iconButton:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.raised {
+  border-radius: 2px;
+}
+
+/**
+ * Floating Action Button
+ */
+.action,
+.iconButton {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 0;
+  .container {
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 50%;
+    .icon {
+      line-height: 48px !important; /* SHIP HACK */
+    }
+  }
+}
+
+/**
+ * Pressed State
+ */
+.pressed {
+  &.action,
+  &.raised,
+  &.iconButton {
+    transform: translateY(2px);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  &.flat {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    .container {
+      transform: translateY(1px);
+    }
+  }
+}
+
+.group {
+  display: flex;
+  .btn {
+    width: 100%;
+    flex-grow: 1
+  }
+}
+
+.group .wrapper:first-child  {
+  margin-left: 0;
+}
+
+.group .wrapper:last-child  {
+  margin-right: 0;
+}
+
+.fill {
+  display: flex;
+  .wrapper {
+    flex-grow: 1;
+  }
+}
+
+.right {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.left {
+  text-align: left;
+  justify-content: flex-start;
+}

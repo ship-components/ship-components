@@ -1,0 +1,8 @@
+engines:
+  eslint:
+    enabled: true
+exclude_paths:
+- "Gruntfile.js"
+- "tasks/*/**"
+- "es5/*/**"
+- "**-test.js"

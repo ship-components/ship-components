@@ -1,0 +1,7 @@
+{
+  "extends": "ship-components",
+
+  "globals" : {
+    "jest" : true
+  }
+}

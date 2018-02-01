@@ -1,0 +1,95 @@
+{
+  "name": "ship-components-highlight-click",
+  "version": "0.3.0",
+  "description": "Generates temporary click highlights",
+  "main": "src/HighlightClick.jsx",
+  "scripts": {
+    "build": "npm run test && grunt build",
+    "lint": "eslint src/*.jsx",
+    "test": "jest src/ --coverage",
+    "coverage": "cat ./coverage/lcov.info | coveralls -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ship-components/ship-components-highlight-click.git"
+  },
+  "keywords": [
+    "react",
+    "highlight-click",
+    "es2015"
+  ],
+  "author": "Isaac Suttell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ship-components/ship-components-highlight-click/issues"
+  },
+  "homepage": "https://github.com/ship-components/ship-components-highlight-click/issues#readme",
+  "contributors": [
+    {
+      "name": "Isaac Suttell",
+      "email": "isaac.suttell@sony.com"
+    },
+    {
+      "name": "Sepand Assadi",
+      "email": "sepand.assadi@sony.com"
+    },
+    {
+      "name": "Chris Orescan",
+      "email": "chris.orescan@sony.com"
+    }
+  ],
+  "devDependencies": {
+    "babel-core": "^6.0.15",
+    "babel-eslint": "^4.1.8",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-transform-es2015-classes": "^6.9.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.11.1",
+    "codacy-coverage": "^1.1.3",
+    "codeclimate-test-reporter": "^0.4.1",
+    "coveralls": "^2.12.0",
+    "css-loader": "^0.22.0",
+    "eslint": "^1.10.3",
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.16.1",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-eslint": "^17.1.0",
+    "grunt-webpack": "^1.0.11",
+    "jest": "^22.1.4",
+    "jest-css-modules": "^1.1.0",
+    "jit-grunt": "^0.9.1",
+    "package-banner": "^0.1.0",
+    "postcss-loader": "^0.8.0",
+    "prop-types": "^15.6.0",
+    "regenerator-runtime": "^0.11.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "\\.(css)$": "jest-css-modules"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/classnames",
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  },
+  "babelJest": {
+    "include": [
+      "src/**/*.@(js|jsx|es6)"
+    ]
+  },
+  "dependencies": {
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  }
+}

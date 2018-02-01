@@ -1,0 +1,92 @@
+{
+  "name": "ship-components-utility",
+  "version": "1.4.0",
+  "description": "Javascript set of utilities",
+  "main": "src/index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "build": "npm test && grunt clean && grunt build",
+    "lint": "eslint src/**/*.js",
+    "test": "jest src/ --coverage",
+    "watch:test": "jest src/ --coverage --watch",
+    "coverage": "cat ./coverage/lcov.info | coveralls -v",
+    "travis": "npm install trevor && trevor"
+  },
+  "lint-staged": {
+    "*.{js,jsx},!dist/*.{js,jsx}": [
+      "eslint --fix",
+      "git add",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ship-components/ship-components-utility.git"
+  },
+  "keywords": [
+    "javascript",
+    "javascript-library",
+    "node",
+    "grunt",
+    "webpack",
+    "utilities",
+    "jest"
+  ],
+  "author": "Sepand Assadi <sepand.assadi@sony.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ship-components/ship-components-utility/issues"
+  },
+  "homepage": "https://github.com/ship-components/ship-components-utility#readme",
+  "contributors": [
+    {
+      "name": "Isaac Suttell",
+      "email": "isaac.suttell@sony.com"
+    },
+    {
+      "name": "Sepand Assadi",
+      "email": "sepand.assadi@sony.com"
+    },
+    {
+      "name": "Chris Orescan",
+      "email": "chris.orescan@sony.com"
+    }
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    }
+  },
+  "babelJest": {
+    "include": [
+      "src/**/*.@(js|es6)"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-jest": "^22.0.4",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.14.0",
+    "eslint-config-ship-components": "^1.5.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-coveralls": "^1.0.1",
+    "grunt-eslint": "^20.1.0",
+    "grunt-webpack": "^3.0.2",
+    "husky": "^0.14.3",
+    "istanbul-lib-instrument": "^1.9.1",
+    "jest": "^22.0.4",
+    "lint-staged": "^6.0.0",
+    "strict-loader": "^1.1.0",
+    "webpack": "^3.10.0"
+  }
+}

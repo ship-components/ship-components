@@ -1,0 +1,41 @@
+/*!
+ *        .__    .__                                                                          __                   .__    .__       .__    .__  .__       .__     __                   .__  .__        __    
+ *   _____|  |__ |__|_____             ____  ____   _____ ______   ____   ____   ____   _____/  |_  ______         |  |__ |__| ____ |  |__ |  | |__| ____ |  |___/  |_            ____ |  | |__| ____ |  | __
+ *  /  ___/  |  \|  \____ \   ______ _/ ___\/  _ \ /     \\____ \ /  _ \ /    \_/ __ \ /    \   __\/  ___/  ______ |  |  \|  |/ ___\|  |  \|  | |  |/ ___\|  |  \   __\  ______ _/ ___\|  | |  |/ ___\|  |/ /
+ *  \___ \|   Y  \  |  |_> > /_____/ \  \__(  <_> )  Y Y  \  |_> >  <_> )   |  \  ___/|   |  \  |  \___ \  /_____/ |   Y  \  / /_/  >   Y  \  |_|  / /_/  >   Y  \  |   /_____/ \  \___|  |_|  \  \___|    < 
+ * /____  >___|  /__|   __/           \___  >____/|__|_|  /   __/ \____/|___|  /\___  >___|  /__| /____  >         |___|  /__\___  /|___|  /____/__\___  /|___|  /__|            \___  >____/__|\___  >__|_ \
+ *      \/     \/   |__|                  \/            \/|__|               \/     \/     \/          \/               \/  /_____/      \/       /_____/      \/                    \/             \/     \/
+ * ship-components-highlight-click 0.2.0
+ * Description: Generates temporary click highlights
+ * Author: Isaac Suttell
+ * Homepage: https://github.com/ship-components/ship-components-highlight-click/issues#readme
+ * Bugs: https://github.com/ship-components/ship-components-highlight-click/issues
+ * License: MIT
+ */
+.highlight-click--container {
+  position: relative;
+}
+
+.highlight-click--click {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #38b889;
+  opacity: 0;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  animation: highlight-click--zoom-and-fade 0.5s ease-out 1;
+}
+
+@keyframes highlight-click--zoom-and-fade {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  90% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

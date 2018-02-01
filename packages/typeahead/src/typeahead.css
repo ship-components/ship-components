@@ -1,0 +1,71 @@
+.container {
+  position: relative;
+}
+
+.list {
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  left: 0;
+  top: 33px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0 3px 8px color(#000 a(0.24));
+}
+
+/* Fixes the long word bug
+ * SHIPAPPS-119 & SHIPWATCH-707
+ */
+ul.list > li.item {
+  word-wrap: break-word;
+}
+
+.list.hidden {
+  height: 0;
+  overflow: hidden;
+}
+
+.item {
+  padding: 12px 24px;
+  white-space: pre-wrap;
+  cursor: pointer;
+  font-size: 13px;
+  position: relative;
+  transition: all 0.3s ease;
+  color: #000;
+  line-height: 18px;
+  min-height: 18px;
+  &.selected,
+  &:hover {
+    background-color: $primary-color;
+    color: $inverse-font-color;
+  }
+}
+
+.found {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.loading {
+  position: absolute;
+  right: 0;
+  top: 0;
+  animation: spin linear infinite 1s;
+}
+
+.editable {
+
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

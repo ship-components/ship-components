@@ -1,0 +1,76 @@
+/**
+ * Checkbox CSS Module
+ * For use with Webpack style/css loaders
+ */
+
+.container {
+  display: flex;
+  cursor: pointer;
+}
+
+span.icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 20px;
+}
+
+.input,
+.icon-background {
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  position: relative;
+}
+
+.label {
+  line-height: 32px;
+}
+
+.checked .input {
+  color: $accent-color;
+}
+
+.controller {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.icon-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * React CSS Transition Groups
+ */
+
+.enter {
+  opacity: 0.01;
+  transform: scale(0);
+}
+
+.enterActive {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms ease-in;
+}
+
+.leave {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.leaveActive {
+  opacity: 0.01;
+  transform: scale(0);
+  transition: all 200ms ease-out;
+}

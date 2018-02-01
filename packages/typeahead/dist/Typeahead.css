@@ -1,0 +1,90 @@
+.typeahead--container {
+  position: relative;
+}
+
+.typeahead--list {
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  left: 0;
+  top: 33px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+}
+
+/* Fixes the long word bug
+ * SHIPAPPS-119 & SHIPWATCH-707
+ */
+ul.typeahead--list > li.typeahead--item {
+  word-wrap: break-word;
+}
+
+.typeahead--list.typeahead--hidden {
+  height: 0;
+  overflow: hidden;
+}
+
+.typeahead--item {
+  padding: 12px 24px;
+  white-space: pre-wrap;
+  cursor: pointer;
+  font-size: 13px;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #000;
+  line-height: 18px;
+  min-height: 18px;
+}
+
+.typeahead--item.typeahead--selected,
+  .typeahead--item:hover {
+  background-color: #5e8aaa;
+  color: #fff;
+}
+
+.typeahead--found {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.typeahead--loading {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-animation: typeahead--spin linear infinite 1s;
+          animation: typeahead--spin linear infinite 1s;
+}
+
+.typeahead--editable {
+
+}
+
+@-webkit-keyframes typeahead--spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes typeahead--spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=Typeahead.css.map*/

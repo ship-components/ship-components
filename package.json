@@ -1,0 +1,38 @@
+{
+  "name": "ship-components",
+  "description": "monorepo of all ship-components",
+  "1workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "scripts": {
+    "test": "lerna run test",
+    "posttest": "lerna run coverage",
+    "lint": "lerna run lint",
+    "build": "lerna run build",
+    "coverage": "lerna run coverage",
+    "clean-install": "lerna clean && lerna bootstrap"
+  },
+  "devDependencies": {
+    "babel-jest": "^22.1.0",
+    "coveralls": "^3.0.0",
+    "eslint": ">=4 <5",
+    "jest": "^21.2.1",
+    "jest-css-modules": "^1.1.0",
+    "lerna": "^2.8.0",
+    "style-loader": "^0.20.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.css$": "jest-css-modules"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  }
+}

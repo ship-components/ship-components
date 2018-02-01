@@ -1,0 +1,120 @@
+{
+  "name": "ship-components-texteditor",
+  "version": "0.4.0",
+  "description": "Rich Text Editor for React",
+  "main": "src/TextEditor.js",
+  "scripts": {
+    "start": "grunt server",
+    "build": "npm run test && grunt build",
+    "lint": "eslint src/*.js",
+    "test": "jest src/ --coverage",
+    "coverage": "cat ./coverage/lcov.info | coveralls -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ship-components/ship-components-texteditor.git"
+  },
+  "keywords": [
+    "react",
+    "rich text editor",
+    "draft-js"
+  ],
+  "author": "Isaac Suttell <isaac@isaacsuttell.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ship-components/ship-components-texteditor/issues"
+  },
+  "homepage": "https://github.com/ship-components/ship-components-texteditor",
+  "contributors": [
+    {
+      "name": "Isaac Suttell",
+      "email": "isaac.suttell@sony.com"
+    },
+    {
+      "name": "Sepand Assadi",
+      "email": "sepand.assadi@sony.com"
+    },
+    {
+      "name": "Chris Orescan",
+      "email": "chris.orescan@sony.com"
+    }
+  ],
+  "dependencies": {
+    "draft-convert": "^1.4.3",
+    "draft-js": "^0.9.1",
+    "linkify-it": "^2.0.2",
+    "ship-components-icon": "^0.1.0",
+    "tlds": "^1.180.0",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-es2015-classes": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "babel-runtime": "^6.20.0",
+    "classnames": "^2.2.5",
+    "coveralls": "^2.12.0",
+    "css-loader": "^0.26.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-15": "^1.0.0",
+    "enzyme-to-json": "^3.0.1",
+    "eslint": "^3.18.0",
+    "eslint-config-ship-components": "^1.1.0",
+    "eslint-loader": "^1.7.0",
+    "eslint-plugin-react": "^6.10.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "figlet": "^1.2.0",
+    "file-loader": "^0.9.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-webpack": "^1.0.18",
+    "immutable": "^3.8.1",
+    "jest": "^22.1.4",
+    "jest-css-modules": "^1.1.0",
+    "json-loader": "^0.5.4",
+    "package-banner": "^0.1.1",
+    "postcss-calc": "^5.3.1",
+    "postcss-color-function": "^2.0.1",
+    "postcss-color-hex-alpha": "^2.0.0",
+    "postcss-loader": "^1.2.1",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "react-test-renderer": "^15.6.2",
+    "regenerator-runtime": "^0.11.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "jest": {
+    "setupFiles": [
+      "./jest-setup.js"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.css$": "jest-css-modules"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/classnames",
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  },
+  "babelJest": {
+    "include": [
+      "src/**/*.@(js|jsx|es6)",
+      "node_modules/ship-components-highlight-click/src/**/*.@(js|jsx|es6)",
+      "node_modules/ship-components-outsideclick/src/**/*.@(js|jsx|es6)"
+    ]
+  }
+}

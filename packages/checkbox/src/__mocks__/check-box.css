@@ -1,0 +1,28 @@
+/**
+ * Mock Checkbox CSS Module
+ * For use testing only
+ */
+
+module.exports = {
+  container: 'container',
+
+  icon: 'icon',
+
+  input: 'input',
+
+  'icon-background' : 'icon-background',
+
+  label : 'label',
+
+  checked : 'checked',
+
+  controller : 'controller',
+
+  enter: 'enter',
+
+  enterActive: 'enterActive',
+
+  leave: 'leave',
+
+  leaveActive: 'leaveActive'
+};

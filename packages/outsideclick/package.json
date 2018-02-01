@@ -1,0 +1,86 @@
+{
+  "name": "ship-components-outsideclick",
+  "version": "0.3.0",
+  "description": "React component to detect clicks outside of its children",
+  "main": "src/OutsideClick.js",
+  "scripts": {
+    "test": "jest src/ --coverage",
+    "posttest": "npm run coverage",
+    "lint": "eslint src/*.jsx",
+    "build": "npm test && grunt build",
+    "coverage": "cat ./coverage/lcov.info | coveralls -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ship-components/ship-components-outsideclick.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Isaac Suttell <isaac@isaacsuttell.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ship-components/ship-components-outsideclick/issues"
+  },
+  "homepage": "https://github.com/ship-components/ship-components-outsideclick#readme",
+  "contributors": [
+    {
+      "name": "Isaac Suttell",
+      "email": "isaac.suttell@sony.com"
+    },
+    {
+      "name": "Sepand Assadi",
+      "email": "sepand.assadi@sony.com"
+    }
+  ],
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-eslint": "^4.1.6",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^6.2.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.1.18",
+    "codacy-coverage": "^1.1.3",
+    "codeclimate-test-reporter": "^0.4.1",
+    "coveralls": "^2.12.0",
+    "eslint": "^1.2.1",
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.2.3",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^5.0.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-eslint": "^17.1.0",
+    "grunt-webpack": "^1.0.11",
+    "jest": "^22.1.4",
+    "jest-css-modules": "^1.1.0",
+    "jit-grunt": "^0.9.1",
+    "package-banner": "^0.1.0",
+    "prop-types": "^15.5.8",
+    "react-addons-test-utils": "^15.6.2",
+    "regenerator-runtime": "^0.11.1",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "\\.css$": "jest-css-modules"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/classnames",
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  },
+  "babelJest": {
+    "include": [
+      "src/**/*.@(js|jsx|es6)"
+    ]
+  },
+  "dependencies": {
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  }
+}

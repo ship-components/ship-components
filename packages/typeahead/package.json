@@ -1,0 +1,105 @@
+{
+  "name": "ship-components-typeahead",
+  "version": "0.5.3",
+  "description": "Material Design React Typeahead Component",
+  "main": "src/Typeahead.jsx",
+  "scripts": {
+    "start": "grunt server",
+    "build": "npm run test && grunt build",
+    "lint": "eslint src/*.jsx",
+    "test": "jest src/ --coverage",
+    "coverage": "cat ./coverage/lcov.info | coveralls -v",
+    "travis": "npm install trevor && trevor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ship-components/ship-components-typeahead.git"
+  },
+  "keywords": [
+    "react",
+    "material design",
+    "typeahead",
+    "es2015"
+  ],
+  "author": "Isaac Suttell <isaac.suttell@sony.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ship-components/ship-components-typeahead/issues"
+  },
+  "homepage": "https://github.com/ship-components/ship-components-typeahead#readme",
+  "contributors": [
+    {
+      "name": "Isaac Suttell",
+      "email": "isaac.suttell@sony.com"
+    },
+    {
+      "name": "Sepand Assadi",
+      "email": "sepand.assadi@sony.com"
+    }
+  ],
+  "devDependencies": {
+    "autoprefixer": "^6.1.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.1.4",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-es2015-classes": "^6.22.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.22.0",
+    "classnames": ">=2.0.0",
+    "coveralls": "^2.11.16",
+    "css-loader": "^0.26.1",
+    "eslint": "^1.9.0",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.8.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "fuzzy": "^0.1.3",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-eslint": "^17.3.1",
+    "grunt-webpack": "^1.0.11",
+    "jest": "^22.1.4",
+    "jest-css-modules": "^1.1.0",
+    "postcss-calc": "^5.0.0",
+    "postcss-color-function": "^2.0.0",
+    "postcss-color-hex-alpha": "^2.0.0",
+    "postcss-loader": "^0.7.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^1.1.0",
+    "react-addons-test-utils": ">=15.0.0",
+    "regenerator-runtime": "^0.11.1",
+    "strict-loader": "^0.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.4",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "\\.(css)$": "jest-css-modules"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/classnames",
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  },
+  "babelJest": {
+    "include": [
+      "src/**/*.@(js|jsx|es6)",
+      "node_modules/react-highlight-click/src/**/*.@(js|jsx|es6)"
+    ]
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "ship-components-outsideclick": "^0.3.0",
+    "ship-components-textinput": "^0.3.9"
+  }
+}

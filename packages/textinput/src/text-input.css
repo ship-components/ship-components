@@ -1,0 +1,90 @@
+.container {
+  position: relative;
+  margin: 4px 0;
+  width: 100%;
+
+  &.focus .fieldContainer:after {
+    width: 100%;
+  }
+
+  &.error .fieldContainer:after,
+  &.error .fieldContainer:before {
+    background-color: color($warning-color  a(0.3));
+  }
+  &.success .fieldContainer:after,
+  &.success .fieldContainer:before {
+    background-color: color($success-color  a(0.3));
+  }
+}
+
+.fieldContainer {
+  line-height: 1;
+  position: relative;
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+    transition: all 500ms ease;
+  }
+
+  &:after {
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+  }
+
+  &:before {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.field  {
+  width: 100%;
+  transition: 250ms ease height;
+  position: relative;
+  z-index: 5;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 4px 0 8px 0;
+  resize: none;
+  overflow: auto;
+  cursor: text;
+}
+
+.field:disabled {
+  color: inherit;
+}
+
+.focus .field {
+  cursor: text;
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  transition: all 500ms ease;
+  z-index: 4;
+  line-height: 1;
+}
+
+.active .label {
+  transform: translateY(calc($base-grid-size * -5));
+  font-size: 12px;
+}
+
+.error {
+  font-size: inherit;
+}
+
+.hasLabel {
+  margin-top: 24px;
+}

@@ -1,0 +1,10 @@
+languages:
+  Ruby: false
+  JavaScript: true
+  Python: false
+  PHP: false
+exclude_paths:
+- "Gruntfile.js"
+- "tasks/*"
+- "dist/*"
+- "**-test.js"

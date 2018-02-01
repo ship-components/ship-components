@@ -1,0 +1,89 @@
+{
+  "name": "ship-components-grid",
+  "version": "0.3.0",
+  "description": "React Masonry Component",
+  "main": "src/Grid.js",
+  "scripts": {
+    "start": "grunt server",
+    "build": "npm run test && grunt build",
+    "lint": "eslint src/*.jsx",
+    "test": "jest src/ --coverage",
+    "coverage": "cat ./coverage/lcov.info | coveralls -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ship-components/ship-components-grid.git"
+  },
+  "keywords": [
+    "react",
+    "masonry"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ship-components/ship-components-grid/issues"
+  },
+  "homepage": "https://github.com/ship-components/ship-components-grid#readme",
+  "contributors": [
+    {
+      "name": "Isaac Suttell",
+      "email": "isaac.suttell@sony.com"
+    },
+    {
+      "name": "Chris Orescan",
+      "email": "chris.orescan@sony.com"
+    },
+    {
+      "name": "Sepand Assadi",
+      "email": "sepand.assadi@sony.com"
+    }
+  ],
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.11.1",
+    "classnames": "^2.2.5",
+    "coveralls": "^2.11.12",
+    "eslint": "^3.3.1",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-react": "^6.1.2",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-webpack": "^1.0.14",
+    "imagesloaded": "^4.1.0",
+    "jest": "^22.1.4",
+    "jest-css-modules": "^1.1.0",
+    "masonry-layout": "^4.1.1",
+    "react-addons-test-utils": "^15.6.2",
+    "regenerator-runtime": "^0.11.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.css$": "jest-css-modules"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/classnames",
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  },
+  "babelJest": {
+    "include": [
+      "src/**/*.@(js|jsx|es6)"
+    ]
+  },
+  "dependencies": {
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  }
+}

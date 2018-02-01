@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+}
+
+.control {
+  display: flex;
+  cursor: pointer;
+  margin: 32px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+  line-height: 32px;
+}
+
+.label {
+  flex-grow: 1;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.icon {
+  width: 24px;
+  height: 32px;
+  text-align: center;
+  line-height: inherit;
+  transform: rotate(180deg);
+  transition: all 500ms ease;
+}
+
+.collaspsed .icon {
+  transform: rotate(0.001deg);
+}
+
+.action {
+  opacity: 0.56;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.content {
+  position: relative;
+}

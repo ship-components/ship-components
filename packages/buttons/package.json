@@ -1,0 +1,105 @@
+{
+  "name": "ship-components-buttons",
+  "version": "0.4.1",
+  "description": "Material Design React Buttons",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "grunt server",
+    "build": "grunt build",
+    "test": "jest src/ --coverage",
+    "watch:tests": "jest src/  --coverage --watch",
+    "lint": "eslint src/ --ext .jsx --ext .js --ignore-pattern __tests__ --max-warnings 0",
+    "lint:fix": "eslint src/ --ext .jsx --ext .js --fix",
+    "coverage": "cat ./coverage/lcov.info | coveralls -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ship-components/ship-components-buttons.git"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "react",
+    "buttons",
+    "css modules"
+  ],
+  "author": "Isaac Suttell <isaac@isaacsuttell.com>",
+  "contributors": [
+    {
+      "name": "Isaac Suttell",
+      "email": "isaac.suttell@sony.com"
+    },
+    {
+      "name": "Sepand Assadi",
+      "email": "sepand.assadi@sony.com"
+    },
+    {
+      "name": "Chris Orescan",
+      "email": "chris.orescan@sony.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ship-components/ship-components-buttons/issues"
+  },
+  "homepage": "https://github.com/ship-components/ship-components-buttons#readme",
+  "dependencies": {
+    "classnames": ">=2.0.0",
+    "prop-types": ">=15.5 <16",
+    "react": ">=15.5 <16",
+    "react-addons-css-transition-group": ">=15.5 <16",
+    "react-dom": ">=15.5 <16",
+    "ship-components-highlight-click": "^0.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "codacy-coverage": "^2.0.3",
+    "coveralls": "^2.13.1",
+    "css-loader": "^0.28.7",
+    "eslint": ">=4",
+    "eslint-config-ship-components": "^1.4.2",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.3.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-eslint": "^17.3.1",
+    "grunt-webpack": "^1.0.11",
+    "jest": "^22.1.4",
+    "jest-css-modules": "^1.1.0",
+    "postcss-calc": "^5.0.0",
+    "postcss-color-function": "^2.0.0",
+    "postcss-color-hex-alpha": "^2.0.0",
+    "postcss-loader": "^0.7.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^1.1.0",
+    "regenerator-runtime": "^0.11.0",
+    "strict-loader": "^0.1.2",
+    "style-loader": "^0.18.2",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      ".*": "jest-css-modules"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/?!(ship-components-highlight-click)"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/classnames",
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  }
+}
