@@ -639,6 +639,7 @@ Below are is a sample of how to setup the loaders:
 2. `npm test`
 
 ## History
+* 1.5.0 - Consolidated into ship-components monorep
 * 1.4.0 - updates dev dependencies to latest version (webpack, babel, eslint, jest, coveralls, eslint-config-ship-components).
 * 1.3.2 - Removes the unnecessary babel plugins.
 * 1.3.1 - Updates jest and babel-eslint to latest version.
@@ -653,7 +654,7 @@ Below are is a sample of how to setup the loaders:
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2017
+Copyright (c) SHIP
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
