@@ -1,11 +1,12 @@
 {
   "name": "ship-components-utility",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Javascript set of utilities",
   "main": "src/index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "build": "npm test && grunt clean && grunt build",
+    "prepublish": "grunt build",
+    "build": "grunt clean && grunt build",
     "lint": "eslint src/**/*.js",
     "test": "jest src/ --coverage",
     "watch:test": "jest src/ --coverage --watch",
@@ -21,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ship-components/ship-components-utility.git"
+    "url": "git+https://github.com/ship-components/ship-components.git"
   },
   "keywords": [
     "javascript",
@@ -35,9 +36,9 @@
   "author": "Sepand Assadi <sepand.assadi@sony.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ship-components/ship-components-utility/issues"
+    "url": "https://github.com/ship-components/ship-components/issues"
   },
-  "homepage": "https://github.com/ship-components/ship-components-utility#readme",
+  "homepage": "https://github.com/ship-components/ship-components#readme",
   "contributors": [
     {
       "name": "Isaac Suttell",
@@ -54,7 +55,7 @@
   ],
   "jest": {
     "transform": {
-      "^.+\\.js?$": "babel-jest"
+      "^.+\\.jsx?$": "babel-jest"
     }
   },
   "babelJest": {
